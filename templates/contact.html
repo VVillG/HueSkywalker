@@ -1,0 +1,27 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+<hr class="featurette-divider"> 
+
+<form>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">First and Last Name</label>
+        <input type="text" class="form-control" id="senderName" placeholder="Jane Doe">
+    </div>
+    
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="senderEmail" placeholder="name@example.com">
+    </div>
+    
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Message</label>
+        <textarea class="form-control" id="senderMessage" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+
+<hr class="featurette-divider"> 
+
+{% endblock %}
