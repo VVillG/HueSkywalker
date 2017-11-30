@@ -1,0 +1,8 @@
+[user]
+	name = Will Gerould
+	email = vvillg25@gmail.com
+[core]
+	editor = nano
+	pager = more
+[color]
+	ui = true
