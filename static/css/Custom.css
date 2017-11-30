@@ -1,0 +1,183 @@
+/* Gallery */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery {
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+  align-content: center;
+  background: #2d2d2d;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.gallery > a {
+    width: 100%;
+}
+
+.gallery > div {
+  margin: auto;
+  width: 50%;
+}
+
+.gallery > div > img {
+  display: block;
+  width: 100%;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(1.1,1.1);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+/* Gallery2 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery2 {
+  width: 75%;
+  margin: 0 auto;
+  padding: 5px;
+  background: #2d2d2d;
+  align-content: center;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+
+.gallery2 > div {
+  margin: auto;
+  padding: 5px;
+    width: 75%;
+}
+
+.gallery2 > div > img {
+  display: block;
+  width: 100%;
+  transition: .1s transform;
+  transform: translateZ(0); /* hack */
+}
+
+.gallery2 > div:hover {
+  z-index: 1;
+}
+
+.gallery2 > div:hover > img {
+  transform: scale(1.1,1.1);
+  transition: .3s transform;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+
+
+
+
+
+
+/* Custom */
+
+header {
+    font-family: 'Yellowtail', cursive;
+    font-size: 35px;
+}
+
+body p {
+    color: lightgray;
+}
+body p-2 {
+    color: lightgray;
+}
+
+p .lead {
+    color: black;
+}
+
+body h2 {
+    color: white;
+}
+body h3 {
+    color: white;
+}
+body h4 {
+    color: white;
+}
+
+body a {
+    text-decoration: none !important;
+    color: #0a689b;
+}
+
+body a:hover {
+    text-decoration: none !important;
+    color: #c6b867 !important;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+.form-group label {
+    color: white;
+}
+
+
+.featurette-divider {
+    width: 0%;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:#085178;}
+    100% {width: 100%; background-color:#c6b867;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:#085178;}
+    100% {width: 100%; background-color:#c6b867;}
+}

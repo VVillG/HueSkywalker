@@ -2,11 +2,17 @@
 <html lang="en">
 <head>
         <meta charset="utf-8">
-        <title>Gerould - Studios</title>
+        <title>Gerould Studios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{url_for('static',filename='css/Custom.css')}}" rel="stylesheet">
         <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
         <!--Font Awesome-->
         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+        <link href="{{url_for('static',filename='css/cover.css')}}" rel="stylesheet">
+        <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">    
+    
         <!-- Favicon link -->
         <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="shortcut icon">
         
@@ -26,118 +32,66 @@
         gtag('config', 'UA-108702241-1');
     </script>
 
-    
     <style>
-    .Banner
-    {
-        width:100%;
-        min-height: 100%;
-        background-color:darkgray; 
-        height: 80px;
-
-    }
-    </style>
     
+        body {
+    background-color: #2d2d2d;
+    text-decoration-color: white;
+            }
+        
+    </style>
+
 </head>
     
 <body>
         
 <header>
 
- <div class="Banner">&nbsp;</div>
-    
 <!-- Nav -->   
-<nav class="navbar navbar-light bg-light justify-content-between">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-  
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#loginModal"><i class="icon-signin icon-large"></i> Login</a>
-            <a class="dropdown-item" href="/dashboard/"><i class="icon-dashboard icon-large"></i> Dashboard</a>
-            <a class="dropdown-item" href="/portfolio/"> Portfolio</a>
-            <a class="dropdown-item" href="https://www.youtube.com/channel/UCkjaTmfXHYYyNGeN8l-Kz6Q"><i class="icon-youtube icon-large"></i> YouTube Channel</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/contact/"> Contact Me</a>
-            <a class="dropdown-item" href="/about/"> About</a>
-        </div>
-    
-    <a class="navbar-brand" href="/">Home</a>
-</nav>
-
-<!-- Login Model -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Login</h4>
-            </div>
-            <div class="modal-body">
-                <div class="container-fluid">
-                    
-                    <form action="" class="form-inline" method="post">
-                        <input type="text" class="form-control" placeholder="UserName" name="username" value="{{request.form.username}}">
-                        &nbsp;
-                        <input type="password" class="form-control" placeholder="Password" name="password" value="{{request.form.password}}">
-                        &nbsp; 
-                        <br>
-                        <input style="margin-top: 2%;" class="btn btn-primary" type="submit" value="Login">
-                    </form>
-
-                    <div class="container">
-                        <br>
-                            <p>No account? <a href="/register/">Register here</a>.</p>
-                        <br>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
+<div class="d-flex justify-content-center">
+  <div class="p-4"><a href="/portfolio/">Work</a></div>
+  <div class="p-4"><a href="/">Main</a></div>
+  <div class="p-4"><a href="/about/">About</a></div>
 </div>
     
-<!-- Error Flash -->
+</header>
+
+    
+<div class="container-fluid" style="min-height: 100%;">
 
     {% with messages = get_flashed_messages() %}
-        
-                {% if messages %}
-        
-                    {% for message in messages %}
-                        
-                        <div class="alert alert-warning alert-dismissable" role="alert">
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            {{message}}
-                        </div>   
-        
-                    {% endfor %}
-        
-                {% endif %}
-        
-    {% endwith %}
-    
-</header>
-    
 
+    {% if messages %}
+
+    {% for message in messages %}
+
+    <div class="alert alert-warning alert-dismissable" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{message}}
+    </div>
     
-<div class="container-fluid">
-                
+    
+    {% endfor %}
+
+    {% endif %}
+
+    {% endwith %}
+
     {% block body %}
 
     {% endblock %}
 
-</div>
-
-
+</div> 
     
-<hr class="featurette-divider">    
     
 <div id="footer">
-  <div class="container">
-    <p class="text-muted">This website was brought to you by yours truly. - WG</p>
-  </div>
+    <div class="d-flex justify-content-start">
+        <div class="p-3"><a class="insta" href="https://www.instagram.com/gerould.studios" role="button"><i class="icon-instagram icon-large"></i></a></div>
+        <div class="p-3"><a class="linked" href="https://www.linkedin.com/in/williamgerould/" role="button"><i class="icon-linkedin icon-large"></i></a></div>
+        <div class="p-3"><a class="artstation" href="https://www.artstation.com/willgerould" role="button">A R T S T A T I O N</a></div>
+        <div class="ml-auto p-2"><p class="text-muted">This website was brought to you by yours truly. - WG</p></div>
+    </div>
 </div>
     
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

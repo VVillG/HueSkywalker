@@ -2,4 +2,25 @@
 
 {% block body %}
 
+<br>
+
+<div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <div class="card-body">
+        <h4 class="card-title">About Me</h4>
+        <p class="card-text">I am a hard working artist looking to pursue my passion for the digital arts and video game design.</p>
+        <p class="card-text">If you want to collaborate or get a hold of me, click the button below!</p>
+        <a href="/contact/" class="btn btn-primary">Contact Me</a>
+      </div>
+    </div>
+    
+    <div class="gallery cf">
+        <div>
+    <img src="{{ url_for('static', filename='images/IMG9503312.jpg') }}" alt="Responsive image">
+        </div>
+    </div>
+</div>
+
+<br>
+
 {% endblock %}
