@@ -16,5 +16,5 @@ In this site you will find...
 Components include...
 
 1. Google's reCAPTCHA
-2. EmailJS
+2. [EmailJS](https://www.emailjs.com/)
 3. Custom CSS
