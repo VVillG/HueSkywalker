@@ -19,6 +19,9 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def allowed_file(filename):
         return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+
+
+
 @app.route("/", methods = ["GET", "POST"])
 def Main():
 	return render_template("main.html", APP_CONTENT = APP_CONTENT)
@@ -32,6 +35,7 @@ def portfolio():
     return render_template("portfolio.html")
 
 @app.route("/about/", methods = ["GET", "POST"])
+
 def about():
     return render_template("about.html")
 
@@ -39,13 +43,35 @@ def about():
 def contact():
     return render_template("contact.html")
 
+
+
 @app.route("/summerResearch/", methods = ["GET", "POST"])
 def summerResearch():
     return render_template("summerResearch.html")
 
+@app.route("/photo/", methods = ["GET", "POST"])
+def photo():
+    return render_template("photogrammetry.html")
+
+@app.route("/game/", methods = ["GET", "POST"])
+def game():
+    return render_template("summerResearchGame.html")
+
+
+
 @app.route("/AMIC/", methods = ["GET", "POST"])
 def AMIC():
     return render_template("AMIC.html")
+
+@app.route("/RibbonCutting/", methods = ["GET", "POST"])
+def RibbonCutting():
+    return render_template("RibbonCutting.html")
+
+@app.route("/Mobius/", methods = ["GET", "POST"])
+def Mobius():
+    return render_template("MobiusCreek.html")
+
+
 
 @app.route('/uploads/', methods=['GET', 'POST'])
 def upload_file():

@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <title>Gerould Studios</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="p:domain_verify" content="e90161ae694f4a398b84d8bfee0e7e07"/>
+    
         <link href="{{url_for('static',filename='css/Custom.css')}}" rel="stylesheet">
         <link href="{{url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
@@ -31,12 +33,23 @@
 
         gtag('config', 'UA-108702241-1');
     </script>
+    
+    <!-- Google CAPTCHA -->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    
+    <!-- Email System -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_Y5FheWd9UnMZuZkUKfZmT");
+        })();
+    </script>
 
     <style>
     
         body {
-    background-color: #2d2d2d;
-    text-decoration-color: white;
+            background-color: #2d2d2d;
+            text-decoration-color: white;
             }
         
     </style>
